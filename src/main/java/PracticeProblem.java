@@ -23,20 +23,24 @@ public class PracticeProblem {
 	 //3. Create a function called _findSecond_(char[] array, char character) that searches an char array for the given char. return the index of the second occurrence of the char.  If there is only one occurrence, return that index of the char.  return -1 if the char cannot be found.  _Hint: Use a counter_
 	 public static int findSecond (char[] array, char character){
 		int counter = 0;
-		int firstI = 0;
 		for (int i = 0; i < array.length; i++){
 			if (array [i] == character){
 				counter++;
-				
-				if (counter == 1){
-					firstI = 1;
-					}	
-				else if (counter == 2){
+				if (counter == 2){
 					return i;
-				}	
+				}
+				
+			}	
+		}
+			if (counter == 1){
+				for (int i = 0; i < array.length; i++){
+				if (array [i] == character){
+					return i;
+				}
 			}
 		}
 			return -1;
-	 }
-	 	
+	}
+			
 }
+
